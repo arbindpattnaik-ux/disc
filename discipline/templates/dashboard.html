@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Discipline Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <h1>Student Discipline Dashboard</h1>
+    <table>
+        <tr>
+            <th>Student</th>
+            <th>Date</th>
+            <th>Severity</th>
+            <th>Action</th>
+        </tr>
+        {% for r in records %}
+        <tr>
+            <td>{{ r.student.name }}</td>
+            <td>{{ r.incident_date }}</td>
+            <td>{{ r.severity }}</td>
+            <td>{{ r.action_taken }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
